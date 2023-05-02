@@ -14,4 +14,20 @@ public class Employer {
     }
 
 
+    public String getName() {
+        return name;
+    }
+
+    public int getAge() {
+        return age;
+    }
+
+    public int getPayment() {
+        return payment;
+    }
+
+    public int getExperience() {
+        return experience;
+    }
+
 }

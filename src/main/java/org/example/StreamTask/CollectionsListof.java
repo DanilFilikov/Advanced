@@ -32,5 +32,6 @@ public class CollectionsListof {
         .sorted()
         .distinct()
         .forEach(System.out::println);
+        stream.close();
     }
 }
