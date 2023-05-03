@@ -1,4 +1,4 @@
-package org.example.domain.StringTasks;
+package org.example.StringTasks;
 
 public enum Sex {
     MAN("Мужчина"),
