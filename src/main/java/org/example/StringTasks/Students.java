@@ -1,11 +1,13 @@
 package org.example.StringTasks;
 
-import java.util.List;
+import lombok.Value;
 
+import java.util.List;
+@Value
 public class Students {
-    private final org.example.StringTasks.Sex Sex;
-    private final String name;
-    private final int age;
+    org.example.StringTasks.Sex Sex;
+    String name;
+    int age;
 
     public Students(String name, int age, Sex sex) {
         this.name = name;
@@ -13,19 +15,12 @@ public class Students {
         this.Sex = sex;
     }
 
-    public Sex getSex() {
-        return Sex;
-    }
-
-    public int getAge() {
-        return age;
-    }
-
     public String getName() {
         return name;
     }
 
-    public void getOrder(List<Students> list) {
-
-    }
+        @Override
+        public String toString() {
+            return name;
+        }
 }
