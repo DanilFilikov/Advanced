@@ -1,14 +1,14 @@
 package org.example;
 
+import java.util.List;
+import java.util.Scanner;
+
 import org.example.Employer.EmployeeInfo;
 import org.example.StreamTask.CollectionsListOf;
 import org.example.StringTasks.Sex;
 import org.example.StringTasks.Students;
 import org.example.domain.Animal;
 import org.example.domain.Cat;
-
-import java.util.ArrayList;
-import java.util.List;
 
 import static org.example.StringTasks.BracketsInsertion.addBrackets;
 import static org.example.StringTasks.EqualPairs.countCouple;
@@ -19,12 +19,12 @@ import static org.example.StringTasks.SpaceMerging.mergeSpace;
 import static org.example.StringTasks.StringComparing.compareString;
 import static org.example.StringTasks.StringCompressing.compressBad;
 import static org.example.StringTasks.StringValidation.validateString;
-import static org.example.StringTasks.Сollection.getCollection;
+import static org.example.StringTasks.Collection.getCollection;
 
 public class Main {
-
-    static List<Students> list = List.of(new Students("Вася", 16, Sex.MAN), new Students("Петя", 23, Sex.MAN),
-            new Students("Елена", 42, Sex.WOMEN), new Students("Иван петрович", 69, Sex.MAN));
+    public static Scanner in = new Scanner(System.in);
+    static List<Students> list = List.of(new Students(Sex.MAN, "Вася", 16), new Students(Sex.MAN, "Петя", 23),
+            new Students(Sex.WOMEN, "Елена", 42), new Students(Sex.MAN, "Иван петрович", 69));
     static List<String> list2 = List.of("a1", "a4", "a3", "a2", "a1", "a4");
 
     public static void main(String[] args) {
@@ -32,26 +32,16 @@ public class Main {
         CollectionsListOf listOF = new CollectionsListOf();
         Animal cat = new Cat("Cat", "mammal", "British cat", "Gray");
 
-        System.out.println(getCollection(new ArrayList<>()));
-
-        getIterator();
-
-        System.out.println(getNumberoftwo(new int[]{1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20}));
-
-        System.out.println(compareString("ABCDEFDefd", "ABCFEDDedf"));
-
-        System.out.println(compressBad("AAABBBBBBLLLDCCCDSASfffssssssssssssaaaaaaaaaa "));
-
-        System.out.println(getChar("aaabsssssffffff"));
-
-        System.out.println(validateString("a((s)dv)sx"));
-
-        System.out.println(addBrackets(new StringBuilder("Miserable")));
-
-        System.out.println(mergeSpace("         asdasd    asd           asd                 das      asd         "));
-
-        System.out.println(countCouple(new int[]{1, 3, 5, 3, 6, 7, 3, 2, 1, 8, 5}));
-
+        System.out.println(getCollection(in));
+        getIterator(in);
+        System.out.println(getNumberoftwo(in));
+        System.out.println(compareString(in));
+        System.out.println(compressBad(in));
+        System.out.println(getChar(in));
+        System.out.println(validateString(in));
+        System.out.println(addBrackets(in));
+        System.out.println(mergeSpace(in));
+        System.out.println(countCouple(in));
         System.out.println("-------------------------------------------------");
         listOF.getTask2(list);
         listOF.addToString(list2);

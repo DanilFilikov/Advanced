@@ -18,28 +18,32 @@ public class EmployeeInfo {
 
     public void returnEmployees() {
         System.out.println("Список сотрудинков");
-        String employees = employeeList.stream().map(Employee::toString)
+        String employees = employeeList.stream()
+                .map(Employee::toString)
                 .collect(Collectors.joining(", "));
         System.out.println(employees);
     }
 
     public void returnMaxPayment() {
         System.out.println("\nСотрудник с максимальной зарплатой");
-        Optional<Employee> max = employeeList.stream().max(paymentComparator);
+        Optional<Employee> max = employeeList.stream()
+                .max(paymentComparator);
         max.ifPresent(System.out::println);
     }
 
     public void getAveragePayment() {
         System.out.println("\nСредняя зарплата среди всех сотрудников");
-        OptionalDouble average = employeeList.stream().mapToInt(Employee::getPayment).average();
-        if (average.isPresent()) {
-            System.out.println(average.getAsDouble());
-        }
+        OptionalDouble average = employeeList.stream()
+                .mapToInt(Employee::getPayment)
+                .average();
+        average.ifPresent(System.out::println);
     }
 
     public void getSumPayment() {
         System.out.println("\nСумма зарплат всех сотрудников");
-        System.out.println(employeeList.stream().mapToInt(Employee::getPayment).sum());
+        System.out.println(employeeList.stream()
+                .mapToInt(Employee::getPayment)
+                .sum());
     }
 
     public void getSomePayment() {

@@ -1,21 +1,31 @@
 package org.example.StreamTask;
 
+import java.util.List;
+
 import org.example.StringTasks.Sex;
 import org.example.StringTasks.Students;
-
-import java.util.List;
 
 public class CollectionsListOf {
 
     public void getTask2(List<Students> list) {
 
         System.out.println("Выбрать кому придет повестка");
-        list.stream().filter(students -> students.getAge() >= 18 && students.getSex() == Sex.MAN && students.getAge() < 27)
+        list.stream()
+                .filter(students -> students.getAge() >= 18
+                        && students.getSex() == Sex.MAN
+                        && students.getAge() < 27)
                 .map(Students::toString).forEach(System.out::println);
 
         System.out.println("Найти кол-во потенциальных работяг");
-        list.stream().filter(students -> students.getSex() == Sex.MAN && students.getAge() >= 18 && students.getAge() < 60
-                || students.getSex() == Sex.WOMEN && students.getAge() >= 18 && students.getAge() < 55).map(Students::toString).forEach(System.out::println);
+        list.stream().
+                filter(students -> students.getSex() == Sex.MAN
+                        && students.getAge() >= 18
+                        && students.getAge() < 60
+                        || students.getSex() == Sex.WOMEN
+                        && students.getAge() >= 18
+                        && students.getAge() < 55)
+                .map(Students::toString)
+                .forEach(System.out::println);
 
     }
 

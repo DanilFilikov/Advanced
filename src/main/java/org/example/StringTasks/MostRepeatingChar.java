@@ -1,9 +1,13 @@
 package org.example.StringTasks;
 
+import java.util.Scanner;
+
 public class MostRepeatingChar {
 
-    public static char getChar(String str) {
+    public static char getChar(Scanner in) {
         System.out.println("\nНайти первый наиболее часто повторяющийся в строке символ");
+        System.out.println("Введите строку");
+        String str = in.next();
         System.out.println("Исходная строка " + str);
         int globeCount = 0;
         int count = 1;

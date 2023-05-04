@@ -9,6 +9,7 @@
       <list>
         <ConfigurationLocation id="bundled-sun-checks" type="BUNDLED" scope="All" description="Sun Checks">(bundled)</ConfigurationLocation>
         <ConfigurationLocation id="bundled-google-checks" type="BUNDLED" scope="All" description="Google Checks">(bundled)</ConfigurationLocation>
+        <ConfigurationLocation id="b26cec7c-601b-434d-84fe-0b1cef484afb" type="LOCAL_FILE" scope="All" description="dunice">$USER_HOME$/Загрузки/checkstyle-ibs-dunice.xml</ConfigurationLocation>
       </list>
     </option>
   </component>
