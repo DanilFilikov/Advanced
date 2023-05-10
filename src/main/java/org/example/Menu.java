@@ -32,7 +32,7 @@ public class Menu {
         EmployeeInfo employeeInfo = new EmployeeInfo();
         CollectionsListOf listOf = new CollectionsListOf();
         Animal cat = new Cat("Cat", "mammal", "British cat", "Gray");
-        ArrayList<Object> array = new ArrayList<>();
+        List<Object> array = new ArrayList<>();
         boolean isWorking = true;
         array.add(1);
         array.add(2);
