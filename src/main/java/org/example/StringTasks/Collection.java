@@ -14,7 +14,7 @@ public class Collection {
         System.out.println("Введите 10 чисел");
         ArrayList<Object> array = new ArrayList<>();
         for (int i = 0; i < 10; i++) {
-            array.add(in.nextInt());
+            array.add(in.next());
         }
         set.addAll(array);
         System.out.println("Исходный массив " + array);

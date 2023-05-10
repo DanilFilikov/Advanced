@@ -14,7 +14,8 @@ public class CollectionsListOf {
                 .filter(students -> students.getAge() >= 18
                         && students.getSex() == Sex.MAN
                         && students.getAge() < 27)
-                .map(Students::toString).forEach(System.out::println);
+                .map(Students::toString)
+                .forEach(System.out::println);
 
         System.out.println("Найти кол-во потенциальных работяг");
         list.stream().

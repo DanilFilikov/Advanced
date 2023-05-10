@@ -4,7 +4,7 @@ import java.util.Scanner;
 
 public class StringValidation {
 
-    public static boolean validateString(Scanner in) {
+    public static void validateString(Scanner in) {
         System.out.println("\nПровалидировать строку на закрывающиеся скобки");
         System.out.println("Введите строку");
         String str = in.next();
@@ -21,6 +21,10 @@ public class StringValidation {
                 }
             }
         }
-        return opencloseCount == 0;
+        if(opencloseCount == 0){
+            System.out.println("Строка валидна");
+        }else {
+            System.out.println("Строка не валидна");
+        }
     }
 }

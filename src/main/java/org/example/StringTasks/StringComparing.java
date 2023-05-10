@@ -4,7 +4,7 @@ import java.util.Scanner;
 
 public class StringComparing {
 
-    public static boolean compareString(Scanner in) {
+    public static void compareString(Scanner in) {
         System.out.println("\nОпределяющий, является ли одна строка перестановкой другой");
         System.out.println("Введите две строки");
         String str = in.next();
@@ -19,6 +19,10 @@ public class StringComparing {
                 }
             }
         }
-        return str.contentEquals(resultStr);
+        if (str.contentEquals(resultStr)) {
+            System.out.println("Строка является перестановкой");
+        } else {
+            System.out.println("Строка не является перестановкой");
+        }
     }
 }

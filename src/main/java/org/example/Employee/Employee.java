@@ -1,4 +1,4 @@
-package org.example.Employer;
+package org.example.Employee;
 
 import lombok.Value;
 
