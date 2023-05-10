@@ -1,5 +1,6 @@
 package org.example;
 
+import java.util.ArrayList;
 import java.util.List;
 import java.util.Scanner;
 
@@ -14,7 +15,8 @@ import static org.example.StringTasks.BracketsInsertion.addBrackets;
 import static org.example.StringTasks.EqualPairs.countCouple;
 import static org.example.StringTasks.Iterator.getIterator;
 import static org.example.StringTasks.MostRepeatingChar.getChar;
-import static org.example.StringTasks.NumberOfTwo.getNumberoftwo;
+import static org.example.StringTasks.NumberOfTwo.getNumberOfTwo;
+import static org.example.StringTasks.NumberOfTwo.getNumberOfTwo;
 import static org.example.StringTasks.SpaceMerging.mergeSpace;
 import static org.example.StringTasks.StringComparing.compareString;
 import static org.example.StringTasks.StringCompressing.compressBad;
@@ -30,7 +32,14 @@ public class Menu {
         EmployeeInfo employeeInfo = new EmployeeInfo();
         CollectionsListOf listOf = new CollectionsListOf();
         Animal cat = new Cat("Cat", "mammal", "British cat", "Gray");
+        ArrayList<Object> array = new ArrayList<>();
         boolean isWorking = true;
+        array.add(1);
+        array.add(2);
+        array.add(3);
+        array.add(2);
+        array.add(1);
+        array.add(4);
         while(isWorking) {
             System.out.println("""
                      \n
@@ -50,9 +59,9 @@ public class Menu {
                      13)Выход
                     """);
             switch (in.nextInt()) {
-                case 1 ->   System.out.println(getCollection(in));
+                case 1 ->   System.out.println(getCollection(array));
                 case 2 ->   getIterator(in);
-                case 3 ->   System.out.println(getNumberoftwo(in) + " цифр 2");
+                case 3 ->   System.out.println(getNumberOfTwo(in) + " цифр «2»");
                 case 4 ->   compareString(in);
                 case 5 ->   System.out.println("Сжатая строка" + compressBad(in));
                 case 6 ->   System.out.println("Наиболее повторяющийся символ" + getChar(in));

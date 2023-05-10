@@ -9,13 +9,8 @@ public class Collection {
 
     public static Set<Object> set = new HashSet<>();
 
-    public static Set getCollection(Scanner in) {
+    public static Set getCollection(ArrayList<Object> array) {
         System.out.println("\nВозвращает коллекцию уже без дубликатов");
-        System.out.println("Введите 10 чисел");
-        ArrayList<Object> array = new ArrayList<>();
-        for (int i = 0; i < 10; i++) {
-            array.add(in.next());
-        }
         set.addAll(array);
         System.out.println("Исходный массив " + array);
         System.out.println("Получившийся массив");

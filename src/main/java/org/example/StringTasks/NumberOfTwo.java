@@ -5,7 +5,7 @@ import java.util.Scanner;
 
 public class NumberOfTwo {
 
-    public static int getNumberoftwo(Scanner in) {
+    public static int getNumberOfTwo(Scanner in) {
         System.out.println("\nПодсчитывает количество цифр «2», " +
                 "используемых в десятичной записи целых чисел от 0 до n (включительно)");
         System.out.println("Введите кол-во чисел");
@@ -14,7 +14,6 @@ public class NumberOfTwo {
         for (int i = 1; i <= n; i++) {
             array.add(i);
         }
-        System.out.println("Исходный массив " + array);
         int count = 0;
         for (int i = 0; i <= array.size(); i++) {
             if ((i % 10 == 2) || (i / 10 == 2)) {
